@@ -29,7 +29,7 @@ export default function Search({ result }) {
                     Geo and Star
                 </title>
                 <link rel="icon" href="/favicon.ico" />
-                <meta property="og:image" content='/images/disnep.png' key="ogimage" />
+                <meta property="og:image" content='/images/hero-background.jpg' key="ogimage" />
             </Head>
 
             <Header />
