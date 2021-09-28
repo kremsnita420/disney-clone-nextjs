@@ -12,6 +12,7 @@ export default function MovieThumbnail({ result }) {
             onClick={() => router.push(`/movie/${result.id}`)}
         >
             <Image
+                className='bg-center'
                 src={
                     `${BASE_URL}${result.backdrop_path || result.poster_path}` ||
                     `${BASE_URL}${result.poster_path}`

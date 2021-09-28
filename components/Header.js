@@ -1,6 +1,7 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { HomeIcon, SearchIcon, PlusIcon, StarIcon, } from '@heroicons/react/solid'
-import { getSession, signIn, signOut, useSession } from 'next-auth/client'
+import { signIn, signOut, useSession } from 'next-auth/client'
 import { useRouter } from 'next/router'
 
 
@@ -20,14 +21,18 @@ export default function Header() {
                 <div className='flex items-center justify-center'>
                     {session && (
                         <div className=' hidden ml-2 md:flex items-center space-x-6'>
-                            <a className="header-link group">
-                                <HomeIcon className="h-4" />
-                                <span className="span md:text-sm lg:text-lg xl:text-xl">Home</span>
-                            </a>
-                            <a className="header-link group">
-                                <SearchIcon className="h-4" />
-                                <span className="span md:text-sm lg:text-lg xl:text-xl">Search</span>
-                            </a>
+                            <Link href='/'>
+                                <a className="header-link group">
+                                    <HomeIcon className="h-4" />
+                                    <span className="span md:text-sm lg:text-lg xl:text-xl">Home</span>
+                                </a>
+                            </Link>
+                            <Link href='/search'>
+                                <a className="header-link group">
+                                    <SearchIcon className="h-4" />
+                                    <span className="span md:text-sm lg:text-lg xl:text-xl">Search</span>
+                                </a>
+                            </Link>
                             <a className="header-link group">
                                 <PlusIcon className="h-4" />
                                 <span className="span md:text-sm lg:text-lg xl:text-xl">Watchlist</span>
